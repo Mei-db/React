@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creator Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="section-box toggles-section">
+            <div class="toggle-item">
+                <span>Public Figure</span>
+                <label class="switch">
+                    <input type="checkbox" id="publicFigure" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <div class="toggle-item">
+                <span>Animeta Verified</span>
+                <label class="switch">
+                    <input type="checkbox" id="animetaVerified">
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <div class="toggle-item">
+                <span>Ani App Onboarded</span>
+                <label class="switch">
+                    <input type="checkbox" id="aniAppOnboarded">
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <div class="toggle-item">
+                <span>Delist Creator</span>
+                <label class="switch">
+                    <input type="checkbox" id="delistCreator">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
+
+        <div class="section-box managed-section">
+            <div class="managed-label">Managed By</div>
+            <div class="radio-group">
+                <label class="radio-item">
+                    <input type="radio" name="managedBy" value="Self" checked>
+                    <span>Self</span>
+                </label>
+                <label class="radio-item">
+                    <input type="radio" name="managedBy" value="Agency">
+                    <span>Agency</span>
+                </label>
+            </div>
+        </div>
+
+        <form id="creatorForm" class="form-container">
+            <div class="form-tabs">
+                <div class="tab">Contact Details</div>
+            </div>
+
+            <div class="form-content">
+                <div class="form-group">
+                    <label>Creator Full Name <span class="required">*</span></label>
+                    <input type="text" id="fullName" placeholder="Narendra Modi" value="Narendra Modi">
+                </div>
+                <div class="form-group">
+                    <label>Instagram Handle</label>
+                    <input type="text" id="instaHandle" placeholder="narendramodi" value="narendramodi">
+                </div>
+                <div class="form-group">
+                    <label>Creator Type</label>
+                    <div class="custom-select">
+                        <select id="creatorType">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Direct Mobile Number</label>
+                    <div class="mobile-input-container">
+                        <select class="prefix-select" id="directMobilePrefix">
+                            <option value="+91">🇮🇳 +91</option>
+                            <option value="+1">🇺🇸 +1</option>
+                        </select>
+                        <input type="text" class="mobile-input" id="directMobile" placeholder="Enter mobile number">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Creator Email</label>
+                    <input type="email" id="creatorEmail" placeholder="Enter">
+                </div>
+                <div class="form-group">
+                    <label>Contact POC Name (If Other Than Creator)</label>
+                    <input type="text" id="pocName" placeholder="Enter">
+                </div>
+
+                <div class="form-group">
+                    <label>POC Mobile Number</label>
+                    <div class="mobile-input-container">
+                        <select class="prefix-select" id="pocMobilePrefix">
+                            <option value="+91">🇮🇳 +91</option>
+                            <option value="+1">🇺🇸 +1</option>
+                        </select>
+                        <input type="text" class="mobile-input" id="pocMobile" placeholder="Enter">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>POC Email ID</label>
+                    <input type="email" id="pocEmail" placeholder="Enter">
+                </div>
+                <div class="form-group">
+                    <label>Relationship</label>
+                    <input type="text" id="relationship" placeholder="Enter">
+                </div>
+
+                <div class="form-group">
+                    <label>City</label>
+                    <div class="custom-select">
+                        <select id="city">
+                            <option value="Delhi">Delhi</option>
+                            <option value="Mumbai">Mumbai</option>
+                            <option value="Bangalore">Bangalore</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>State</label>
+                    <div class="custom-select">
+                        <select id="state">
+                            <option value="Delhi">Delhi</option>
+                            <option value="Maharashtra">Maharashtra</option>
+                            <option value="Karnataka">Karnataka</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Country</label>
+                    <div class="custom-select">
+                        <select id="country">
+                            <option value="India">India</option>
+                            <option value="USA">USA</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-footer">
+                <button type="button" id="saveDraftBtn" class="btn-save">Save As Draft</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
