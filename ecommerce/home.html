@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shop</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+    <nav>
+        <h2>ShopEase</h2>
+        <div>
+            <a href="home.html">Home</a>
+            <a href="cart.html">Cart</a>
+        </div>
+    </nav>
+
+    <h1>Products</h1>
+
+    <div class="products">
+
+        <div class="card">
+            <h3>T-Shirt</h3>
+            <p>₹499</p>
+            <button onclick="addToCart('T-Shirt',499)">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <h3>Shoes</h3>
+            <p>₹1999</p>
+            <button onclick="addToCart('Shoes',1999)">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <h3>Watch</h3>
+            <p>₹1499</p>
+            <button onclick="addToCart('Watch',1499)">Add to Cart</button>
+        </div>
+
+    </div>
+
+<script>
+function addToCart(name, price){
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    cart.push({name, price, quantity:1});
+    localStorage.setItem("cart", JSON.stringify(cart));
+    alert("Added to cart");
+}
+</script>
+
+</body>
+</html>
