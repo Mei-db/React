@@ -1,0 +1,16 @@
+.item-card {
+  border: 1px solid #ccc;
+  padding: 16px;
+  margin: 8px 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.item-card h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.item-card p {
+  margin: 4px 0;
+}
